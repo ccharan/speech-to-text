@@ -11,32 +11,29 @@ file_name = 'transcibed.txt'
 decision = 'None'
 
 example_path = 'C:\\Users\\Charan\\General\\'
-path = input("Enter the path for the file to be saved ex - [{}]: ".format(example_path))
+path = input("\nEnter the path for the file to be saved ex - [{}]: ".format(example_path))
 path.replace('\\', '\\\\')
 
 file = path + '\\' + file_name
 
-print('\n\nLanguage : language-code')
-
-lang_codes = """English = en-IN
-Hindi = 'hi-IN'
-Kannada = 'kn-IN'
-Tamil = 'ta-IN'F:\F:\F:\
-Telugu = 'te-IN'
+languages = """English
+Hindi
+Kannada
+Tamil
+Telugu
 """
 
-print('')
-print(lang_codes)
+print('\n***Languages***')
+print(languages)
 
-lang_code_dict = {'English':'en-IN', 'Hindi':'hi-IN', 'Kannada':'kn-IN', 'Tamil':'ta-IN', 'Telugu':'te-IN'}
-
+lang_code_dict = {'English': 'en-IN', 'Hindi': 'hi-IN', 'Kannada': 'kn-IN', 'Tamil': 'ta-IN', 'Telugu': 'te-IN'}
 
 while True:
-    lang = input('Enter the language that you are going to speak, [for English press enter]: ')
+    lang = input('Enter the language that you are going to speak: ')
     lang_code = lang_code_dict.get(lang)
 
     if lang_code in lang_code_dict.values():
-        break    
+        break
     print('Invalid, Try again')
 
 r = sr.Recognizer()
@@ -48,12 +45,12 @@ while True:
             r.adjust_for_ambient_noise(source)
             print('start speaking')
             audio = r.listen(source)
-    
+
         with open(file, mode='a', encoding='utf8', errors='ignore') as f:
             f.write(r.recognize_google(audio, language=lang_code))
             f.write('\n')
         f.close()
-        
+
         decision = input('Do you want to continue? (y/n): ')
         if decision == 'y':
             continue
@@ -61,11 +58,10 @@ while True:
             break
         else:
             print('Invalid input, exiting...')
-        
+
     except BaseException as e:
         print(e)
-        
 
-print('RESULT: file is saved at {} as {} '.format(path.replace('\\\\', '\\'), file_name))
+print('\nRESULT: file is saved at {} as {} '.format(path.replace('\\\\', '\\'), file_name))
 
-input('Type any keyword to exit!!!')
+input('\nType any keyword to exit!!!')
