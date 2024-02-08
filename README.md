@@ -11,10 +11,11 @@ The Speech to Text GUI Tool is a user-friendly graphical application that enable
 - **Transcribed Text Display:** The transcribed text is displayed on the GUI for easy viewing.
 - **Text Saving:** Users have the option to save the transcribed text by clicking on the save button.
 
-- <img width="300" alt="speech to text ui" src="https://github.com/ccharan/speech-to-text/assets/72061061/a2e9053f-155e-44e9-b66c-314cc8b84972">
-- <img width="300" alt="speech to text ui" src="https://github.com/ccharan/speech-to-text/assets/72061061/c3fdf434-770a-469d-a3b9-e9fa5d1ea5f1">
+<p float="left">
+  <img width="400" alt="speech to text ui" src="https://github.com/ccharan/speech-to-text/assets/72061061/a2e9053f-155e-44e9-b66c-314cc8b84972" style="margin-right: 10px;" />
+<img width="400" alt="speech to text ui" src="https://github.com/ccharan/speech-to-text/assets/72061061/c3fdf434-770a-469d-a3b9-e9fa5d1ea5f1" style="margin-right: 10px;" />
 
-
+</p>
 
 
 
